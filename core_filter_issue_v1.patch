@@ -17,6 +17,6 @@ index 6b911cb8a0..73c521cb08 100644
  
 -    $text = implode($chunks);
 +    $text = $chunks ? implode($chunks) : $text;
-     // Revert back to the original comment contents
+     // Revert to the original comment contents
      _filter_url_escape_comments('', FALSE);
      $text = preg_replace_callback('`<!--(.*?)-->`', '_filter_url_escape_comments', $text);
