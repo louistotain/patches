@@ -1,0 +1,16 @@
+diff --git a/src/ConfigRewriter.php b/src/ConfigRewriter.php
+index c72cb62..b9f1df9 100644
+--- a/src/ConfigRewriter.php
++++ b/src/ConfigRewriter.php
+@@ -156,11 +156,6 @@ class ConfigRewriter implements ConfigRewriterInterface {
+    * @throws \Drupal\config_rewrite\Exception\NonexistentInitialConfigException
+    */
+   public function rewriteConfig($original_config, $rewrite, $config_name, $extensionName) {
+-    if (empty($original_config)) {
+-      $message = 'Tried to rewrite config @config via @module module without initial config present.';
+-      $this->logger->error($message, ['@config' => $config_name, '@module' => $extensionName]);
+-      throw new NonexistentInitialConfigException("Tried to rewrite config $config_name by $extensionName module without initial config.");
+-    }
+ 
+     if (isset($rewrite['config_rewrite']) && $rewrite['config_rewrite'] == 'replace') {
+       return $rewrite;
