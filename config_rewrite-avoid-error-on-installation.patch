@@ -2,7 +2,7 @@ diff --git a/src/ConfigRewriter.php b/src/ConfigRewriter.php
 index c72cb62..b9f1df9 100644
 --- a/src/ConfigRewriter.php
 +++ b/src/ConfigRewriter.php
-@@ -156,11 +156,6 @@ class ConfigRewriter implements ConfigRewriterInterface {
+@@ -179,11 +179,6 @@ class ConfigRewriter implements ConfigRewriterInterface {
     * @throws \Drupal\config_rewrite\Exception\NonexistentInitialConfigException
     */
    public function rewriteConfig($original_config, $rewrite, $config_name, $extensionName) {
