@@ -1,5 +1,5 @@
 diff --git a/src/ConfigRewriter.php b/src/ConfigRewriter.php
-index c72cb62..b9f1df9 100644
+index 20e26eb..0000000 100644
 --- a/src/ConfigRewriter.php
 +++ b/src/ConfigRewriter.php
 @@ -179,11 +179,6 @@ class ConfigRewriter implements ConfigRewriterInterface {
@@ -11,6 +11,3 @@ index c72cb62..b9f1df9 100644
 -      $this->logger->error($message, ['@config' => $config_name, '@module' => $extensionName]);
 -      throw new NonexistentInitialConfigException("Tried to rewrite config $config_name by $extensionName module without initial config.");
 -    }
- 
-     if (isset($rewrite['config_rewrite']) && $rewrite['config_rewrite'] == 'replace') {
-       return $rewrite;
